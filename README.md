@@ -1,6 +1,6 @@
 # Does the new billing page lift orders? An A/B test of a checkout page
 
-An end-to-end A/B test analysis in **SQL + Python** for an online toy store: experiment validity checks, a hypothesis test with confidence intervals, guardrail metrics and a ship / don't-ship decision. The data is **synthetic** (Maven Fuzzy Factory, built by Maven Analytics for teaching).
+An end-to-end A/B test analysis in **SQL + Python** for an online toy store: experiment validity checks, a hypothesis test with confidence intervals, guardrail metrics and a ship / don't-ship decision. The data is **synthetic** (Maven Fuzzy Factory, built by Maven Analytics).
 
 ## TL;DR
 
