@@ -187,35 +187,6 @@ The run ends with `ALL CHECKS PASSED`. It rebuilds the SQLite database, all resu
 
 Note: Python cannot create a virtual environment inside a folder whose path contains a colon (`:`). If you see that error, move the project to a path without one.
 
-## Repo structure
-
-```
-checkout-ab-test/
-  README.md
-  requirements.txt
-  run_all.py                    runs the 4 scripts in order, then checks README/memo numbers
-  data/raw/                     the CSV files (git-ignored) + README.txt (how to download)
-  docs/data_dictionary.csv      column descriptions from Maven Analytics
-  sql/
-    00_views.sql                marketing channel per session
-    01_monthly_trends.sql       monthly sessions, orders, conversion, revenue
-    02_channel_performance.sql  performance per marketing channel
-    03_funnel.sql               sessions reaching each funnel step
-    04_ab_sessions.sql          builds the A/B table (one row per billing session)
-    05_ab_checks.sql            summary and check queries for the test
-  src/
-    config.py                   paths, constants, small helpers
-    stats_utils.py              the statistics functions
-    01_build_database.py        CSV -> SQLite, indexes, row-count checks
-    02_business_overview.py     business overview: result tables, charts 01-05, findings
-    03_build_ab_table.py        builds and validates the A/B table
-    04_ab_test.py               the A/B analysis: statistics, charts 06-10, ab_results.json
-  results/                      small CSV / JSON / Markdown outputs
-  reports/
-    charts/                     10 PNG charts
-    decision_memo.md            one-page ship / don't-ship memo
-```
-
 ## Skills demonstrated
 
 - **SQL:** joins, CTEs, CASE, aggregation, subqueries (including a correlated EXISTS), a view, and a window of dates derived from the data.
@@ -225,8 +196,3 @@ checkout-ab-test/
 - **Guardrail metrics:** net revenue, refund rate and gross margin next to the primary metric.
 - **Segmentation and stability:** device split and weekly trend, clearly labelled as exploratory.
 - **Communication:** decision rules fixed before the results, a one-page decision memo, stated limitations.
-
-## Resume bullets
-
-- Analyzed a checkout-page A/B test (3,320 billing sessions) with SQL and Python; validated the experiment (sample ratio and balance checks) and showed the new page lifted order conversion from 45.1% to 62.1% (+17.0 pp, 95% CI 13.7 to 20.3) while net revenue per session rose by $7.56; recommended shipping.
-- Built a reproducible SQL + Python pipeline (SQLite, pandas, SciPy) on a 470K-session e-commerce dataset: 6 SQL scripts, automated data and result checks, 10 charts and a one-page decision memo covering guardrail metrics (revenue, margin, refunds) and their limits.
