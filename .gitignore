@@ -1,0 +1,13 @@
+# Virtual environment (".venv" without the slash also covers a symlinked venv)
+.venv/
+.venv
+__pycache__/
+
+# Raw data is ~100 MB and must not be redistributed: download it yourself (see data/raw/README.txt)
+data/raw/*
+!data/raw/README.txt
+
+# The SQLite database is rebuilt from the CSVs by src/01_build_database.py
+data/maven.db
+
+.DS_Store

@@ -1,0 +1,5 @@
+# Versions tested with Python 3.14. sqlite3 ships with Python, so it is not listed.
+pandas==3.0.6
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2

@@ -1,0 +1,8 @@
+step,sessions,share_of_sessions,share_of_previous_step
+sessions,472871,1.0,
+products,261231,0.5524,0.5524
+product_page,210214,0.4445,0.8047
+cart,94953,0.2008,0.4517
+shipping,64484,0.1364,0.6791
+billing,52058,0.1101,0.8073
+order,32313,0.0683,0.6207

@@ -1,0 +1,179 @@
+{
+  "test_window": {
+    "start": "2012-09-10 00:13:05",
+    "end": "2013-01-05 20:53:22",
+    "calendar_weeks": 17
+  },
+  "sessions": {
+    "/billing": 1663,
+    "/billing-2": 1657,
+    "total": 3320
+  },
+  "orders": {
+    "/billing": 750,
+    "/billing-2": 1029
+  },
+  "conv_rates": {
+    "/billing": 0.45099218280216474,
+    "/billing-2": 0.6210018105009053
+  },
+  "lift_pp": 17.000962769874057,
+  "lift_rel": 0.3769680144840074,
+  "ci": {
+    "level": 0.95,
+    "low_pp": 13.657942952037933,
+    "high_pp": 20.34398258771018,
+    "bootstrap_low_pp": 13.505663576343514,
+    "bootstrap_high_pp": 20.307672655339637
+  },
+  "p_values": {
+    "z": 9.821111543455196,
+    "primary_ztest": 9.133087412442252e-23,
+    "primary_chi2": 9.133087412443102e-23,
+    "refund_rate": 0.2844501203330303
+  },
+  "srm_p": 0.917064977340736,
+  "balance_p": {
+    "device_type": 0.22999967677481564,
+    "channel": 0.6990830297135577,
+    "is_repeat_session": 0.7649315086667937,
+    "landing_page": 0.7171884796464048
+  },
+  "contamination": {
+    "users_in_both_variants": 18,
+    "their_sessions": 38,
+    "sensitivity_sessions": {
+      "/billing": 1644,
+      "/billing-2": 1638
+    },
+    "sensitivity_conv_rates": {
+      "/billing": 0.4495133819951338,
+      "/billing-2": 0.6208791208791209
+    },
+    "sensitivity_z": 9.841507299687459,
+    "sensitivity_p": 7.458490872228319e-23,
+    "same_conclusion": true
+  },
+  "guardrails": {
+    "revenue_per_session": {
+      "/billing": 22.545099218280217,
+      "/billing-2": 31.04388050694026,
+      "diff": 8.498781288660041,
+      "ci_low": 6.751481221814121,
+      "ci_high": 10.151805560404283
+    },
+    "net_revenue_per_session": {
+      "/billing": 21.132273000601323,
+      "/billing-2": 28.69070006035003,
+      "diff": 7.5584270597487055,
+      "ci_low": 5.783017957309341,
+      "ci_high": 9.155513996906649
+    },
+    "gross_margin_per_session": {
+      "/billing": 13.75526157546603,
+      "/billing-2": 18.940555220277613,
+      "diff": 5.185293644811583,
+      "ci_low": 4.119227390784771,
+      "ci_high": 6.193840159878589
+    },
+    "refund_rate_per_order": {
+      "/billing": 0.06266666666666666,
+      "/billing-2": 0.07580174927113703,
+      "refunded_orders": {
+        "/billing": 47,
+        "/billing-2": 78
+      },
+      "diff": 0.013135082604470369,
+      "ci_low": -0.010579743657044005,
+      "ci_high": 0.03684990886598474,
+      "z": 1.070375949664873,
+      "p_value": 0.2844501203330303
+    },
+    "average_order_value": {
+      "/billing": 49.99,
+      "/billing-2": 49.99000000000001
+    },
+    "ok": {
+      "net_revenue": true,
+      "refund_rate": true,
+      "gross_margin": true
+    }
+  },
+  "segments": {
+    "desktop": {
+      "sessions": {
+        "/billing": 1491,
+        "/billing-2": 1463
+      },
+      "orders": {
+        "/billing": 691,
+        "/billing-2": 933
+      },
+      "conv_rates": {
+        "/billing": 0.46344735077129445,
+        "/billing-2": 0.6377306903622693
+      },
+      "lift_pp": 17.42833395909748,
+      "ci_low_pp": 13.896633235409533,
+      "ci_high_pp": 20.960034682785427
+    },
+    "mobile": {
+      "sessions": {
+        "/billing": 172,
+        "/billing-2": 194
+      },
+      "orders": {
+        "/billing": 59,
+        "/billing-2": 96
+      },
+      "conv_rates": {
+        "/billing": 0.3430232558139535,
+        "/billing-2": 0.4948453608247423
+      },
+      "lift_pp": 15.18221050107888,
+      "ci_low_pp": 5.190727180813513,
+      "ci_high_pp": 25.173693821344244
+    }
+  },
+  "stability": {
+    "weeks": 17,
+    "weeks_new_page_ahead": 17,
+    "before_test_billing": {
+      "sessions": 1954,
+      "orders": 870,
+      "conv_rate": 0.4452405322415558
+    },
+    "after_rollout_billing2_56d": {
+      "sessions": 1318,
+      "orders": 834,
+      "conv_rate": 0.6327769347496206
+    }
+  },
+  "repeat90": {
+    "ordering_sessions": {
+      "/billing": 750,
+      "/billing-2": 1029
+    },
+    "repeat_within_90d": {
+      "/billing": 7,
+      "/billing-2": 10
+    },
+    "rates": {
+      "/billing": 0.009333333333333334,
+      "/billing-2": 0.009718172983479106
+    }
+  },
+  "mde_pp": 4.843188274357477,
+  "impact": {
+    "extra_orders_per_1000_billing_sessions": 170.00962769874056,
+    "extra_orders_ci_low": 136.57942952037934,
+    "extra_orders_ci_high": 203.4398258771018,
+    "revenue_per_billing_session_diff": 8.498781288660041
+  },
+  "decision": {
+    "ship": true,
+    "text": "SHIP /billing-2",
+    "validity_ok": true,
+    "significant": true
+  }
+}
